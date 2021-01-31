@@ -1,0 +1,12 @@
+{
+  "name": "reduxCoinsApp",
+  "displayName": "reduxCoinsApp",
+  "expo": {
+    "name": "reduxCoinsApp",
+    "slug": "reduxCoinsApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
