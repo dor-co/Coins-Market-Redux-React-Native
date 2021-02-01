@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, ActivityIndicator } from "react-native";
+import { StyleSheet, View, ActivityIndicator, Text } from "react-native";
 import CoinsList from "../components/CoinsList";
 import { fetchCoins } from "../redux/actions/CoinsActions";
 import { connect } from "react-redux";
@@ -18,7 +18,7 @@ class AppContainer extends Component {
     }
     return (
       <View style={styles.container}>
-        <h1>coins market:</h1>
+        <Text style={styles.title}>coins market:</Text>
         {content}
       </View>);
   }
@@ -34,8 +34,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#303036"
-  }
+    backgroundColor: "#303036",
+  },
+  title: {
+    fontSize: 30,
+    marginTop: 40,
+    marginBottom: 10,
+    color: '#000',
+  },
 });
 
 const mapStateToProps = state => { //access all the props that I created inside the reducer (isFetching, errorMessage, coins, for example: this.props.coins.isFetching)
