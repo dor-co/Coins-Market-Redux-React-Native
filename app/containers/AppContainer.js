@@ -8,8 +8,14 @@ import PropTypes from "prop-types";
 class AppContainer extends Component {
 
   componentDidMount() {
+    //this.fetchCoins();
+    //setInterval(this.fetchCoins.bind(this), 120000);
     this.props.fetchCoins(); //Api call to get the data from CoinsActions class
   }
+
+  // fetchCoins(){
+  //   this.props.fetchCoins();
+  // }
 
   render() {
     let content = <CoinsList coins={this.props.coins.coins} />; //get the coins array
@@ -34,13 +40,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#303036",
+    backgroundColor: "#fff",
   },
   title: {
-    fontSize: 30,
+    fontSize: 35,
     marginTop: 40,
     marginBottom: 10,
-    color: '#000',
+    color: '#7b3790',
   },
 });
 

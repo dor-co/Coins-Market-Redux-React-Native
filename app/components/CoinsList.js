@@ -3,8 +3,7 @@ import { StyleSheet, FlatList, Text, Image, View } from "react-native";
 import PropTypes from "prop-types";
 
 export default class CoinsList extends Component {
-  //_keyExtractor = item => item.email;
-
+  
   _renderItem = ({ item }) => {
     const { name, symbol, current_price, total_volume, price_change_percentage_24h, image } = item;
 
@@ -40,9 +39,9 @@ export default class CoinsList extends Component {
         style={{ flex: 1 }}
         data={this.props.coins}
         keyExtractor={this._keyExtractor}
-        renderItem={this._renderItem}
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
+        renderItem={this._renderItem}
       />
     );
   }
@@ -65,14 +64,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     margin: 10,
-    backgroundColor: "#D5D5D5",
-    padding: 15,
+    backgroundColor: "#EEEEEE",
+    padding: 10,
     borderRadius: 20,
-
   },
   coinImage: {
-    width: 80,
-    height: 80,
+    width: 90,
+    height: 90,
   },
   cardTextStyle: {
     color: "#000",
