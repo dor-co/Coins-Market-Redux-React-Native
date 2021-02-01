@@ -6,7 +6,7 @@ export default class CoinsList extends Component {
   //_keyExtractor = item => item.email;
 
   _renderItem = ({ item }) => {
-    const { name, symbol, current_price, total_volume, price_change_percentage_24h } = item;
+    const { name, symbol, current_price, total_volume, price_change_percentage_24h, image } = item;
 
     return (
       <View>
@@ -26,6 +26,9 @@ export default class CoinsList extends Component {
                     ) : (<Text style={styles.green_coin}>{price_change_percentage_24h}%</Text>)}
             </Text>
           </View>
+          <Image
+            style={styles.coinImage}
+            source={{uri: image}} />
         </View>
       </View>
     );
@@ -54,7 +57,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#093339"
+    backgroundColor: "#093339",
   },
   cardContainerStyle: {
     width: 300,
@@ -67,9 +70,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
 
   },
-  faceImageStyle: {
-    width: 65,
-    height: 65
+  coinImage: {
+    width: 80,
+    height: 80,
   },
   cardTextStyle: {
     color: "#000",
