@@ -3,8 +3,7 @@ import { StyleSheet, FlatList, Text, Image, View } from "react-native";
 import PropTypes from "prop-types";
 
 export default class CoinsList extends Component {
-  
-  _renderItem = ({ item }) => {
+  renderItem = ({ item }) => {
     const { name, symbol, current_price, total_volume, price_change_percentage_24h, image } = item;
 
     return (
@@ -41,7 +40,7 @@ export default class CoinsList extends Component {
         keyExtractor={this._keyExtractor}
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
-        renderItem={this._renderItem}
+        renderItem={this.renderItem}
       />
     );
   }
