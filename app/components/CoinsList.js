@@ -35,7 +35,7 @@ export default class CoinsList extends Component {
   render() {
     return (
       <View>
-        <Text style={styles.title}>Coins Market:</Text>
+        <Text style={styles.title}>Coins Market</Text>
         <FlatList
           style={{ flex: 1 }}
           data={this.props.coins}
