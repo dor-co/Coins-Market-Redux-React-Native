@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     margin: 10,
     backgroundColor: "#EEEEEE",
-    padding: 20,
+    padding: 15,
     borderRadius: 20,
   },
   viewCard: {
