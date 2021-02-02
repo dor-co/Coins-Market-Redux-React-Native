@@ -18,7 +18,7 @@ export const fetchCoins = () => {
     return async dispatch => {
         dispatch(coinsRequest()); //fetch coins request, send the type COINS_REQUEST to CoinsReducer - spinner is true 
         try{ //try to get the data from Api
-            let response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false');
+            let response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'); //Api call
             let json = await response.json();
             console.log(json);
             dispatch(coinsSuccess(json)); //success to get the data from Api, send the type COINS_SUCCESS to CoinsReducer - spinner is false and get the co ins array

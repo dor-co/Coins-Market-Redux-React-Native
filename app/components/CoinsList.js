@@ -8,9 +8,9 @@ export default class CoinsList extends Component {
 
     return (
       <View>
-        <View style={styles.cardContainerStyle}>
-          <View style={{ paddingRight: 5 }}>
-            <Text style={styles.cardTextStyle}>
+        <View style={styles.cards}>
+          <View style={styles.viewCard}>
+            <Text style={styles.cardText}>
               {name}
               {'\n'}
               {symbol}
@@ -57,21 +57,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#093339",
   },
-  cardContainerStyle: {
+  cards: {
     width: 300,
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
     margin: 10,
     backgroundColor: "#EEEEEE",
-    padding: 10,
+    padding: 20,
     borderRadius: 20,
+  },
+  viewCard: {
+    paddingRight: 5,
   },
   coinImage: {
     width: 90,
     height: 90,
   },
-  cardTextStyle: {
+  cardText: {
     color: "#000",
     textAlign: "left",
   },

@@ -1,6 +1,6 @@
 import { COINS_REQUEST, COINS_SUCCESS, COINS_FAILURE } from '../actions/types';
 
-const initialState = {
+const initialState = { //the state of the app
     isFetching: false,
     errorMessage: '',
     coins: []

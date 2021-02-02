@@ -8,24 +8,25 @@ import PropTypes from "prop-types";
 class AppContainer extends Component {
 
   componentDidMount() {
-    //this.fetchCoins();
-    //setInterval(this.fetchCoins.bind(this), 120000);
+    this.fetchCoins();
+    setInterval(this.fetchCoins.bind(this), 120000);
     this.props.fetchCoins(); //Api call to get the data from CoinsActions class
   }
 
-  // fetchCoins(){
-  //   this.props.fetchCoins();
-  // }
+  fetchCoins(){
+     this.props.fetchCoins();
+  }
 
   render() {
     let content = <CoinsList coins={this.props.coins.coins} />; //get the coins array
-    if (this.props.coins.isFetching) { //display spinner if isFetching is true
+    if (this.props.coins.isFetching) { //if isFetching is true display spinner (content is spinner), else display coins array (content is array) 
       content = <ActivityIndicator size="large" />;
     }
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>coins market:</Text>
-        {content}
+        <Text style={styles.title}>Coins Market:</Text>
+        {/* spinner/coins array */}
+        {content} 
       </View>);
   }
 }
