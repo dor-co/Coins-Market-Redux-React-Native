@@ -24,7 +24,6 @@ class AppContainer extends Component {
     }
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Coins Market:</Text>
         {/* spinner/coins array */}
         {content} 
       </View>);
@@ -42,12 +41,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",
-  },
-  title: {
-    fontSize: 35,
-    marginTop: 40,
-    marginBottom: 10,
-    color: '#7b3790',
   },
 });
 

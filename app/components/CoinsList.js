@@ -20,13 +20,13 @@ export default class CoinsList extends Component {
               ${total_volume.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
               {'\n'}
               {price_change_percentage_24h < 0 ? (
-                        <Text style={styles.red_coin}>{price_change_percentage_24h}%</Text>
-                    ) : (<Text style={styles.green_coin}>{price_change_percentage_24h}%</Text>)}
+                <Text style={styles.red_coin}>{price_change_percentage_24h}%</Text>
+              ) : (<Text style={styles.green_coin}>{price_change_percentage_24h}%</Text>)}
             </Text>
           </View>
           <Image
             style={styles.coinImage}
-            source={{uri: image}} />
+            source={{ uri: image }} />
         </View>
       </View>
     );
@@ -34,14 +34,17 @@ export default class CoinsList extends Component {
 
   render() {
     return (
-      <FlatList
-        style={{ flex: 1 }}
-        data={this.props.coins}
-        keyExtractor={this._keyExtractor}
-        showsVerticalScrollIndicator={false}
-        showsHorizontalScrollIndicator={false}
-        renderItem={this.renderItem}
-      />
+      <View>
+        <Text style={styles.title}>Coins Market:</Text>
+        <FlatList
+          style={{ flex: 1 }}
+          data={this.props.coins}
+          keyExtractor={this._keyExtractor}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
+          renderItem={this.renderItem}
+        />
+      </View>
     );
   }
 }
@@ -83,5 +86,12 @@ const styles = StyleSheet.create({
   },
   green_coin: {
     color: '#27960e',
+  },
+  title: {
+    fontSize: 35,
+    marginTop: 40,
+    marginBottom: 10,
+    color: '#7b3790',
+    textAlign: 'center',
   },
 });
