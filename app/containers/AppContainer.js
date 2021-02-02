@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, ActivityIndicator, Text } from "react-native";
+import { StyleSheet, View, ActivityIndicator } from "react-native";
 import CoinsList from "../components/CoinsList";
 import { fetchCoins } from "../redux/actions/CoinsActions";
 import { connect } from "react-redux";

@@ -7,7 +7,6 @@ const initialState = { //the state of the app
 };
 
 const CoinsReducer = (state = initialState, action) => {
-    console.log(action.type)
     switch (action.type) {
         case COINS_REQUEST: //fetch coins request
             return { ...state, isFetching: true };
