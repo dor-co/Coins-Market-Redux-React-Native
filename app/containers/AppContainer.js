@@ -4,6 +4,7 @@ import CoinsList from "../components/CoinsList";
 import { fetchCoins } from "../redux/actions/CoinsActions";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+//import PdfFilePage from '../components/pdfFilePage';
 
 class AppContainer extends Component {
 

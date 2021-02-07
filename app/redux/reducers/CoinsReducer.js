@@ -15,8 +15,8 @@ const CoinsReducer = (state = initialState, action) => {
         case COINS_SUCCESS: //success to get the data from Api
             return { ...state, isFetching: false, coins: action.payload };
         default:
-            return state;    
-    }
+            return state; 
+    }   
 };
 
 export default CoinsReducer;
