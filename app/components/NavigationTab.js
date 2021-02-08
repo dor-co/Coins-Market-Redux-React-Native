@@ -1,8 +1,6 @@
 import * as React from 'react';
-//import { Text, View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-//import { createAppContainer } from 'react-navigation';
 import AppContainer from '../containers/AppContainer';
 import { Provider } from 'react-redux';
 import CoinsReducer from '../redux/reducers/CoinsReducer';
@@ -55,7 +53,6 @@ export default function NavigationTab() {
                 iconName = focused ? 'document-outline' : 'document-sharp';
               }
 
-            // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
         })}

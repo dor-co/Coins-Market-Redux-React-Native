@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import PdfReader from './PdfReader';
-//import Pdf from 'react-native-pdf';
 
 export default class pdfFilePage extends Component {
     
